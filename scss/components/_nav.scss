@@ -1,8 +1,11 @@
 @import '../abstracts/colors';
-@import '../abstracts/fonts';
 
 .hamburger {
   padding: 0 20px;
+}
+
+#logo {
+  display: none;
 }
 
 #hamburger-one,
@@ -29,7 +32,6 @@
 
 #nav-items {
   list-style-type: none;
-  background-color: red;
   box-sizing: border-box;
   font-family: 'cocogoose-thin', 'Lato', sans-serif;
   width: 100%;
@@ -42,4 +44,45 @@
 
 .campaign-btn {
   display: none;
+}
+
+@media (min-width: 768px) {
+  .hamburger {
+    display: none;
+  }
+
+  #logo {
+    display: block;
+  }
+
+  #nav-items {
+    display: flex;
+    justify-content: flex-end;
+    top: 0;
+    margin: 0;
+    position: fixed;
+    height: 7%;
+    align-items: center;
+    background-color: #fff;
+
+    
+    li {
+      padding: 0 30px;
+
+      img {
+        width: 10%;
+        float: left;
+        margin: 0;
+      }
+    }
+  }
+
+  .campaign-btn {
+    display: block;
+    padding: 10px 30px;
+    background-color: #fff;
+    border: 5px solid $orange;
+    color: $orange;
+    white-space: nowrap;
+  }
 }

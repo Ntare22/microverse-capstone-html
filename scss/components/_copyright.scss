@@ -1,0 +1,15 @@
+footer {
+  display: flex;
+  padding: 20px;
+  align-items: center;
+  img {
+    width: 30%;
+    height: 30%;
+  }
+
+  p {
+    width: 70%;
+    padding: 12px;
+    font-size: 14px;
+  }
+}

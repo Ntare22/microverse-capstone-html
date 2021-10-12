@@ -1,0 +1,33 @@
+#speakers-section {
+  display: flex;
+  flex-direction: column;
+  padding: 20px 25px;
+  
+  h2 {
+    text-align: center;
+  }
+  
+  #speakers {
+    div {
+      align-items: center;
+      display: flex;
+      padding: 0 10px;
+      font-size: 12px;
+
+      background-color: #fff;
+      
+      .performerInfo {
+        flex-direction: column;
+        align-items: flex-start;
+        .performer-name {
+          font-weight: 700;
+          font-size: 17px;
+        }
+      }
+    }
+    img {
+      width: 30%;
+      height: 30%;
+    }
+  }
+}

@@ -1,0 +1,43 @@
+#programs-section {
+  display: flex;
+  flex-direction: column;
+  padding: 30px;
+  background-color: $dark-grey;
+  color: #fff;
+
+  h2 {
+    text-align: center;
+  }
+
+  #programs {
+    padding: 10px;
+    img {
+      width: 15%;
+      height: 15%;
+    }
+    .program {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      font-size: 10px;
+
+      h4 {
+        text-align: center;
+        width: 15%;
+        color: $orange
+      }
+      p {
+        width: 65%;
+      }
+    }
+  }
+
+  .btn-join {
+    padding: 14px;
+    border: transparent;
+    background-color: $orange;
+    color: #fff;
+    margin: 0 15%;
+    width: 70%;
+  }
+}

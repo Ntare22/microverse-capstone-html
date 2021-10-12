@@ -1,9 +1,7 @@
 function toggle(btn) {
   btn.classList.toggle('toggle');
   const navList = document.getElementById('nav-items');
-  navList.classList.toggle('hide-menu')
-  // console.log(navList.style.display === '')
-  
+  navList.classList.toggle('hide-menu');
 }
 
 function loadIndex() {
@@ -12,24 +10,25 @@ function loadIndex() {
       icon: './assets/chat.svg',
       caption: 'program image',
       title: 'Lecture',
-      description: 'Lorem, ipsum dolor sit amet consectetur adipisicing elit. Dolorem magni ratione velit quod doloribus accusamus natus. Velit corrupti alias quibusdam placeat voluptatibus quis iste debitis laboriosam adipisci, eum possimus maxime.',
+      description: 'Lorem, ipsum dolor sit amet consectetur adipisicing elit. Dolorem magni ratione velit quod.',
     },
     {
       icon: './assets/chat.svg',
       caption: 'program image',
       title: 'Lecture',
-      description: 'Lorem, ipsum dolor sit amet consectetur adipisicing elit. Dolorem magni ratione velit quod doloribus accusamus natus. Velit corrupti alias quibusdam placeat voluptatibus quis iste debitis laboriosam adipisci, eum possimus maxime.',
+      description: 'Lorem, ipsum dolor sit amet consectetur adipisicing elit. Dolorem magni ratione velit quod.',
     },
   ];
 
   programs.forEach((item) => {
     const programItem = document.createElement('div');
+    programItem.classList = 'program'
 
     const imgItem = document.createElement('img');
     imgItem.setAttribute('src', item.icon);
     imgItem.setAttribute('alt', item.caption);
 
-    const itemTitle = document.createElement('h6');
+    const itemTitle = document.createElement('h4');
     itemTitle.innerHTML = item.title;
 
     const itemDesc = document.createElement('p');
@@ -47,18 +46,20 @@ function loadIndex() {
       image: './assets/img-cap.jpeg',
       name: 'Yochai Benkler',
       title: 'Lecture',
-      description: 'Lorem, ipsum dolor sit amet consectetur adipisicing elit. Dolorem magni ratione velit quod doloribus accusamus natus. Velit corrupti alias quibusdam placeat voluptatibus quis iste debitis laboriosam adipisci, eum possimus maxime.',
+      description: 'Lorem, ipsum dolor sit amet consectetur adipisicing elit. Dolorem magni ratione velit quod.',
     },
     {
       image: './assets/img-cap.jpeg',
       name: 'Yochai Benkler',
       title: 'Lecture',
-      description: 'Lorem, ipsum dolor sit amet consectetur adipisicing elit. Dolorem magni ratione velit quod doloribus accusamus natus. Velit corrupti alias quibusdam placeat voluptatibus quis iste debitis laboriosam adipisci, eum possimus maxime.',
+      description: 'Lorem, ipsum dolor sit amet consectetur adipisicing elit. Dolorem magni ratione velit quod.',
     },
   ];
 
   performers.forEach((performer) => {
     const performerItem = document.createElement('div');
+    const performerDetails = document.createElement('div')
+    performerDetails.classList = 'performerInfo'
 
     const imgItem = document.createElement('img');
     imgItem.setAttribute('src', performer.image);
@@ -66,22 +67,34 @@ function loadIndex() {
 
     const itemName = document.createElement('p');
     itemName.innerHTML = performer.name;
+    itemName.classList = 'performer-name';
 
     const performerTitle = document.createElement('p');
     performerTitle.innerHTML = performer.title;
+    performerTitle.classList = 'performer-title';
 
     const performerDesc = document.createElement('p');
     performerDesc.innerHTML = performer.description;
+    performerDesc.classList = 'performer-desc';
 
     performerItem.appendChild(imgItem);
-    performerItem.appendChild(itemName);
-    performerItem.appendChild(performerTitle);
-    performerItem.appendChild(performerDesc);
+    performerDetails.appendChild(itemName);
+    performerDetails.appendChild(performerTitle);
+    performerDetails.appendChild(performerDesc);
+    performerItem.appendChild(performerDetails);
     document.getElementById('speakers').appendChild(performerItem);
   });
 }
 
 const partners = [
+  {
+    img: './assets/google-logo-black.svg',
+    caption: 'google logo',
+  },
+  {
+    img: './assets/google-logo-black.svg',
+    caption: 'google logo',
+  },
   {
     img: './assets/google-logo-black.svg',
     caption: 'google logo',
@@ -96,7 +109,7 @@ partners.forEach((partner) => {
   const imgItem = document.createElement('img');
   imgItem.setAttribute('src', partner.img);
 
-  document.getElementById('partner').appendChild(imgItem);
+  document.getElementById('partners').appendChild(imgItem);
 });
 
 function loadAbout() {
