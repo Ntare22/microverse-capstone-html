@@ -6,17 +6,18 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Creative Common's</title>
+  <link rel="stylesheet" href="css/style.css">
 </head>
 
 <body onload="loadIndex()">
   <header>
-    <div class="mobile-nav">
-      <nav class="hamburger">
-        <div class="hamburger-one"></div>
-        <div class="hamburger-two"></div>
-        <div class="hamburger-three"></div>
+    <div class="nav-bar">
+      <nav class="hamburger" onclick="toggle(this)">
+        <div id="hamburger-one"></div>
+        <div id="hamburger-two"></div>
+        <div id="hamburger-three"></div>
       </nav>
-      <ul class="nav-items">
+      <ul id="nav-items" class="hide-menu">
         <li class="nav-item">About</li>
         <li class="nav-item">Buy a Ticket</li>
         <li class="nav-item">Jobs</li>

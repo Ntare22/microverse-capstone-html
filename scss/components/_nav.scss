@@ -1,0 +1,45 @@
+@import '../abstracts/colors';
+@import '../abstracts/fonts';
+
+.hamburger {
+  padding: 0 20px;
+}
+
+#hamburger-one,
+#hamburger-two,
+#hamburger-three {
+  background-color: $dark-grey;
+  width: 35px;
+  height: 5px;
+}
+
+.toggle #hamburger-one{
+  -webkit-transform: rotate(-45deg) translate(-7px, 7px);
+  transform: rotate(-45deg) translate(-8px, 8px);
+}
+
+.toggle #hamburger-two {
+  opacity: 0;
+}
+
+.toggle #hamburger-three {
+  -webkit-transform: rotate(45deg) translate(-5px, -5px);
+  transform: rotate(45deg) translate(-8px, -8px);
+}
+
+#nav-items {
+  list-style-type: none;
+  background-color: red;
+  box-sizing: border-box;
+  font-family: 'cocogoose-thin', 'Lato';
+  width: 100%;
+  position: absolute;
+}
+
+.hide-menu {
+  display: none;
+}
+
+.campaign-btn {
+  display: none;
+}

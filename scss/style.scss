@@ -1,0 +1,13 @@
+@import 'abstracts/colors';
+@import 'abstracts/fonts';
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  font-family: 'cocogoose-ultralight', 'Lato';
+  transition: 0.8s;
+  margin: 6px 0;
+}
+
+@import 'components/nav.scss';

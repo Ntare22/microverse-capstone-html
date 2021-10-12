@@ -1,3 +1,11 @@
+function toggle(btn) {
+  btn.classList.toggle('toggle');
+  const navList = document.getElementById('nav-items');
+  navList.classList.toggle('hide-menu')
+  // console.log(navList.style.display === '')
+  
+}
+
 function loadIndex() {
   const programs = [
     {
@@ -73,8 +81,6 @@ function loadIndex() {
   });
 }
 
-loadIndex();
-
 const partners = [
   {
     img: './assets/google-logo-black.svg',
@@ -123,5 +129,3 @@ function loadAbout() {
     document.getElementById('history-items').appendChild(historyItem);
   });
 }
-
-loadAbout();
