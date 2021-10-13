@@ -1,13 +1,28 @@
 #partners-section {
   text-align: center;
   background-color: $dark-grey;
+  padding: 20px;
+
   .partner-title {
-    color: #fff
+    color: #fff;
   }
 
   #partners {
     img {
       width: 30%;
+    }
+  }
+}
+
+@media (min-width: 768px) {
+  #partners-section {
+    padding: 40px;
+  }
+
+  #partners {
+    img {
+      width: 12% !important;
+      padding: 10px 15px;
     }
   }
 }

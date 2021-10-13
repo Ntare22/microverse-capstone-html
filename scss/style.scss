@@ -1,17 +1,19 @@
 @import 'abstracts/colors';
-@import 'abstracts/fonts';
+// @import 'abstracts/fonts';
 
 * {
   box-sizing: border-box;
   padding: 0;
   font-family: 'cocogoose-ultralight', 'Lato', sans-serif;
   transition: 0.8s;
-  margin: 6px 0;
+  margin: 0 0;
 }
 
 @import 'components/nav.scss';
+@import 'components/content.scss';
 @import 'components/hero.scss';
+@import 'components/copyright.scss';
 @import 'components/programs.scss';
 @import 'components/speakers.scss';
 @import 'components/partners.scss';
-@import 'components/copyright.scss';
+@import 'components/about.scss';

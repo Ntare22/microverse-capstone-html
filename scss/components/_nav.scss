@@ -1,7 +1,14 @@
 @import '../abstracts/colors';
 
 .hamburger {
-  padding: 0 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  padding: 7px 10px;
+  position: fixed;
+  background-color: #fff;
+  top: 0;
+  height: 50px;
 }
 
 #logo {
@@ -36,6 +43,7 @@
   font-family: 'cocogoose-thin', 'Lato', sans-serif;
   width: 100%;
   position: absolute;
+  text-decoration: none;
 }
 
 .hide-menu {
@@ -65,12 +73,17 @@
     align-items: center;
     background-color: #fff;
 
-    
     li {
       padding: 0 30px;
 
+      a {
+        text-decoration: none;
+        color: #000;
+      }
+
       img {
-        width: 10%;
+        max-width: 10%;
+        min-width: 100px;
         float: left;
         margin: 0;
       }

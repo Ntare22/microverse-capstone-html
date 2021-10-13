@@ -1,38 +1,20 @@
-@font-face {
-  src: url("../fonts/cocogoose/cocogoose-light.ttf") format("ttf");
-  font-family: 'cocogoose-light';
-}
-
-@font-face {
-  src: url("../fonts/cocogoose/cocogoose-semilight.ttf") format("ttf");
-  font-family: 'cocogoose-semilight';
-}
-
-@font-face {
-  src: url("../fonts/cocogoose/cocogoose-thin.ttf") format("ttf");
-  font-family: 'cocogoose-thin';
-}
-
-@font-face {
-  src: url("../fonts/cocogoose/cocogoose-ultralight.ttf") format("ttf");
-  font-family: 'cocogoose-ultralight';
-}
-
-@font-face {
-  src: url("../fonts/cocogoose/cocogoose-bold.ttf") format("ttf");
-  font-family: 'cocogoose-bold';
-}
-
 * {
   box-sizing: border-box;
   padding: 0;
   font-family: 'cocogoose-ultralight', 'Lato', sans-serif;
   transition: 0.8s;
-  margin: 6px 0;
+  margin: 0 0;
 }
 
 .hamburger {
-  padding: 0 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  padding: 7px 10px;
+  position: fixed;
+  background-color: #fff;
+  top: 0;
+  height: 50px;
 }
 
 #logo {
@@ -65,6 +47,7 @@
   font-family: 'cocogoose-thin', 'Lato', sans-serif;
   width: 100%;
   position: absolute;
+  text-decoration: none;
 }
 
 .hide-menu {
@@ -79,9 +62,11 @@
   .hamburger {
     display: none;
   }
+
   #logo {
     display: block;
   }
+
   #nav-items {
     display: flex;
     justify-content: flex-end;
@@ -92,14 +77,23 @@
     align-items: center;
     background-color: #fff;
   }
+
   #nav-items li {
     padding: 0 30px;
   }
+
+  #nav-items li a {
+    text-decoration: none;
+    color: #000;
+  }
+
   #nav-items li img {
-    width: 10%;
+    max-width: 10%;
+    min-width: 100px;
     float: left;
     margin: 0;
   }
+
   .campaign-btn {
     display: block;
     padding: 10px 30px;
@@ -110,8 +104,93 @@
   }
 }
 
+@media (min-width: 768px) {
+  .home-container {
+    margin-top: 3%;
+    top: 0;
+  }
+
+  .home-container .hero {
+    padding: 10% 26%;
+    margin: auto;
+  }
+
+  .home-container .hero #greeting {
+    color: #ec5242;
+    font-size: 30px;
+  }
+
+  .home-container .hero #headline {
+    color: #ec5242;
+    width: 87%;
+    font-size: 70px;
+    font-weight: bold;
+  }
+
+  .home-container .hero #sub-title {
+    width: 65%;
+    padding: 20px;
+  }
+
+  .home-container .hero .dates {
+    padding: 20px 0;
+    font-size: 30px;
+    font-weight: 700;
+  }
+
+  .home-container .hero .location {
+    font-size: 20px;
+  }
+
+  #programs-section #programs {
+    display: flex;
+    flex-wrap: wrap;
+    width: 90%;
+    margin: auto;
+    justify-content: space-around;
+  }
+
+  #programs-section #programs .program {
+    width: 15% !important;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+  }
+
+  #programs-section #programs .program img {
+    width: 30%;
+    height: 30%;
+  }
+
+  #programs-section #programs .program h4 {
+    font-size: 22px;
+    width: 100%;
+  }
+
+  .about-container .hero #details,
+  .about-container .hero p,
+  .about-container .hero a {
+    font-size: 14px;
+  }
+
+  .about-container #event-logo-section p {
+    font-size: 14px;
+    padding: 10px 20px;
+  }
+
+  #programs-section #programs .program p {
+    width: 80% !important;
+    text-align: center;
+    font-size: 13px;
+  }
+
+  #programs-section .btn-container {
+    display: none;
+  }
+}
+
 .hero {
-  padding: 40px 10px;
+  padding: 50px 10px;
   font-size: 20px;
   background-color: #d3d3d3;
 }
@@ -139,10 +218,47 @@
   font-size: 14px;
 }
 
+footer {
+  background-color: #fff;
+}
+
+footer div {
+  display: flex;
+  padding: 30px;
+  align-items: center;
+}
+
+footer div img {
+  width: 30%;
+  height: 30%;
+}
+
+footer div p {
+  width: 70%;
+  padding: 12px;
+  font-size: 14px;
+}
+
+@media (min-width: 768px) {
+  footer div {
+    display: flex;
+    flex-direction: row;
+    margin: auto;
+    width: 50%;
+    justify-content: space-around;
+    align-items: center;
+  }
+
+  footer div img {
+    width: 200px;
+    height: 30%;
+  }
+}
+
 #programs-section {
   display: flex;
+  padding: 30px 0;
   flex-direction: column;
-  padding: 30px;
   background-color: #272a31;
   color: #fff;
 }
@@ -152,7 +268,14 @@
 }
 
 #programs-section #programs {
-  padding: 10px;
+  padding: 10px 10px;
+  flex-wrap: wrap;
+}
+
+.about-container #event-logo-section img {
+  border: 1px solid #d3d3d3;
+  padding: 20px 40px;
+  width: 340px;
 }
 
 #programs-section #programs img {
@@ -162,15 +285,20 @@
 
 #programs-section #programs .program {
   display: flex;
+  background-color: rgba(255, 255, 255, 0.3);
+  width: 100%;
   align-items: center;
-  justify-content: space-between;
   font-size: 10px;
+  justify-content: space-around;
+  margin: 20px 0;
+  padding: 10px;
 }
 
 #programs-section #programs .program h4 {
   text-align: center;
-  width: 15%;
   color: #ec5242;
+  font-size: 18px;
+  width: 40%;
 }
 
 #programs-section #programs .program p {
@@ -201,7 +329,7 @@
   display: flex;
   padding: 0 10px;
   font-size: 12px;
-  background-color: #fff;
+  margin: 10px;
 }
 
 #speakers-section #speakers div .performerInfo {
@@ -215,13 +343,40 @@
 }
 
 #speakers-section #speakers img {
-  width: 30%;
-  height: 30%;
+  width: 80px;
+  height: 80px;
+}
+
+@media (min-width: 768px) {
+  #speakers-section #speakers {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    width: 70%;
+    margin: auto;
+  }
+
+  #speakers-section #speakers div {
+    padding: 10px;
+    margin: 10px;
+    max-width: 45%;
+    align-items: center;
+  }
+
+  #speakers-section #speakers img {
+    width: 100px;
+    height: 100px;
+  }
+
+  #speakers-section #speakers .performerInfo {
+    max-width: 70%;
+  }
 }
 
 #partners-section {
   text-align: center;
   background-color: #272a31;
+  padding: 20px;
 }
 
 #partners-section .partner-title {
@@ -232,20 +387,127 @@
   width: 30%;
 }
 
-footer {
-  display: flex;
+@media (min-width: 768px) {
+  #partners-section {
+    padding: 40px;
+  }
+
+  #partners img {
+    width: 12% !important;
+    padding: 10px 15px;
+  }
+}
+
+.about-container {
+  box-sizing: border-box;
+}
+
+.about-container .hero {
+  background-color: #d3d3d3;
+  text-align: center;
+}
+
+.about-container .hero #headline {
+  color: #ec5242;
+}
+
+.about-container .hero #details {
   padding: 20px;
-  align-items: center;
+  border: 2px solid #a3a3a3;
 }
 
-footer img {
-  width: 30%;
-  height: 30%;
+.about-container .hero a {
+  color: #000;
+  font-weight: bold;
 }
 
-footer p {
-  width: 70%;
-  padding: 12px;
-  font-size: 14px;
+.about-container #event-logo-section {
+  padding: 40px 0;
+  text-align: center;
+  border-bottom: 1px solid #d3d3d3;
 }
-/*# sourceMappingURL=style.css.map */
+
+.about-container #event-logo-section h2 {
+  padding: 20px 0;
+}
+
+.about-container #history-section {
+  padding: 15px 20px;
+  text-align: center;
+}
+
+.about-container #history-section #history-items .history-item {
+  position: relative;
+}
+
+.about-container #history-section #history-items .history-item img {
+  width: 100%;
+}
+
+.about-container #history-section #history-items .history-item .event-details {
+  position: absolute;
+  width: 100%;
+  height: 94%;
+  margin: auto;
+  color: #fff;
+  bottom: 10px;
+  background: rgba(236, 82, 66, 0.5);
+}
+
+.about-container #history-section #history-items .history-item .event-details .event-text {
+  width: 60%;
+  margin-top: 23%;
+  margin-left: 20%;
+}
+
+@media (min-width: 768px) {
+  .about-container .hero {
+    padding: 10% 20%;
+  }
+
+  .about-container .hero #headline {
+    font-size: 50px;
+    width: 55%;
+    margin: auto;
+    padding: 20px 0;
+  }
+
+  .about-container .hero #details,
+  .about-container .hero p,
+  .about-container .hero a {
+    font-size: 18px;
+  }
+
+  .about-container .hero p {
+    padding-top: 30px;
+  }
+
+  .about-container .hero #details {
+    padding: 40px;
+    width: 70%;
+    margin: auto;
+  }
+
+  .about-container #event-logo-section img {
+    padding: 50px !important;
+    width: 550px !important;
+  }
+
+  .about-container #history-items {
+    display: flex;
+    width: 70%;
+    padding: 40px 0;
+    margin: auto;
+    justify-content: space-around;
+  }
+
+  .about-container #history-items img {
+    width: 90% !important;
+  }
+
+  .about-container #history-items .history-item .event-details {
+    height: 95.8% !important;
+    width: 90% !important;
+    margin-left: 5% !important;
+  }
+}

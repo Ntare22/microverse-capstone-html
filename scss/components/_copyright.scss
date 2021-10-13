@@ -1,15 +1,38 @@
 footer {
-  display: flex;
-  padding: 20px;
-  align-items: center;
-  img {
-    width: 30%;
-    height: 30%;
-  }
+  background-color: #fff;
 
-  p {
-    width: 70%;
-    padding: 12px;
-    font-size: 14px;
+  div {
+    display: flex;
+    padding: 30px;
+    align-items: center;
+
+    img {
+      width: 30%;
+      height: 30%;
+    }
+
+    p {
+      width: 70%;
+      padding: 12px;
+      font-size: 14px;
+    }
+  }
+}
+
+@media (min-width: 768px) {
+  footer {
+    div {
+      display: flex;
+      flex-direction: row;
+      margin: auto;
+      width: 50%;
+      justify-content: space-around;
+      align-items: center;
+
+      img {
+        width: 200px;
+        height: 30%;
+      }
+    }
   }
 }

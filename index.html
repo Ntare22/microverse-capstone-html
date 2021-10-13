@@ -13,15 +13,17 @@
   <header>
     <div class="nav-bar">
       <nav class="hamburger" onclick="toggle(this)">
-        <div id="hamburger-one"></div>
-        <div id="hamburger-two"></div>
-        <div id="hamburger-three"></div>
+        <div class="hamburger-stick" id="hamburger-one"></div>
+        <div class="hamburger-stick" id="hamburger-two"></div>
+        <div class="hamburger-stick" id="hamburger-three"></div>
       </nav>
       <ul id="nav-items" class="hide-menu">
         <li id="logo">
           <img src="./assets/google-logo-black.png" alt="logo">
         </li>
-        <li class="nav-item">About</li>
+        <li class="nav-item">
+          <a href="./about.html">About</a>
+        </li>
         <li class="nav-item">Tickets</li>
         <li class="nav-item">Jobs</li>
         <li class="nav-item">
@@ -33,10 +35,10 @@
   <div class="home-container">
     <section class="hero">
       <p id="greeting">"Hello! Sharing World"</p>
-      <h1 id="headline">creative commons global summit 2015</h1>
+      <h1 id="headline">google jobs global summit 2015</h1>
       <p id="sub-title">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Dolorem magni ratione velit quod doloribus accusamus
         natus.</p>
-      <p class="dates">2015.10.15(THU) ~ 16(FRI)</p>
+      <p class="dates">2021.10.15(THU) ~ 16(FRI)</p>
       <p class="location">@ National Museam of Kigali, Art Center Nabi and more</p>
     </section>
     <section id="programs-section">
@@ -55,8 +57,10 @@
       <div id="partners"></div>
     </section>
     <footer>
-      <img src="./assets/google-logo-black.png" alt="logo">
-      <p>2015 Creative Commons. Some Rights</p>
+      <div>
+        <img src="./assets/google-logo-black.png" alt="logo">
+        <p>2015 Creative Commons. Some Rights</p>
+      </div>
     </footer>
   </div>
   <script src="./index.js"></script>

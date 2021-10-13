@@ -1,11 +1,27 @@
 function toggle(btn) {
   btn.classList.toggle('toggle');
-  const navList = document.getElementById('nav-items');
-  navList.classList.toggle('hide-menu');
 }
 
 function loadIndex() {
   const programs = [
+    {
+      icon: './assets/chat.svg',
+      caption: 'program image',
+      title: 'Lecture',
+      description: 'Lorem, ipsum dolor sit amet consectetur adipisicing elit. Dolorem magni ratione velit quod.',
+    },
+    {
+      icon: './assets/chat.svg',
+      caption: 'program image',
+      title: 'Lecture',
+      description: 'Lorem, ipsum dolor sit amet consectetur adipisicing elit. Dolorem magni ratione velit quod.',
+    },
+    {
+      icon: './assets/chat.svg',
+      caption: 'program image',
+      title: 'Lecture',
+      description: 'Lorem, ipsum dolor sit amet consectetur adipisicing elit. Dolorem magni ratione velit quod.',
+    },
     {
       icon: './assets/chat.svg',
       caption: 'program image',
@@ -42,6 +58,30 @@ function loadIndex() {
   });
 
   const performers = [
+    {
+      image: './assets/img-cap.jpeg',
+      name: 'Yochai Benkler',
+      title: 'Lecture',
+      description: 'Lorem, ipsum dolor sit amet consectetur adipisicing elit. Dolorem magni ratione velit quod.',
+    },
+    {
+      image: './assets/img-cap.jpeg',
+      name: 'Yochai Benkler',
+      title: 'Lecture',
+      description: 'Lorem, ipsum dolor sit amet consectetur adipisicing elit. Dolorem magni ratione velit quod.',
+    },
+    {
+      image: './assets/img-cap.jpeg',
+      name: 'Yochai Benkler',
+      title: 'Lecture',
+      description: 'Lorem, ipsum dolor sit amet consectetur adipisicing elit. Dolorem magni ratione velit quod.',
+    },
+    {
+      image: './assets/img-cap.jpeg',
+      name: 'Yochai Benkler',
+      title: 'Lecture',
+      description: 'Lorem, ipsum dolor sit amet consectetur adipisicing elit. Dolorem magni ratione velit quod.',
+    },
     {
       image: './assets/img-cap.jpeg',
       name: 'Yochai Benkler',
@@ -128,17 +168,28 @@ function loadAbout() {
 
   pastEvents.forEach((event) => {
     const historyItem = document.createElement('div');
+    historyItem.classList = 'history-item';
 
     const imgItem = document.createElement('img');
     imgItem.setAttribute('src', event.img);
+
+    const eventDetails = document.createElement('div');
+    eventDetails.classList = 'event-details';
+
+    const eventText = document.createElement('div');
+    eventText.classList = 'event-text'
+
     const year = document.createElement('h3');
     year.innerHTML = event.year;
     const eventDescription = document.createElement('p');
     eventDescription.innerHTML = event.title;
 
+    eventText.appendChild(year);
+    eventText.appendChild(eventDescription);
+    eventDetails.appendChild(eventText)
+
     historyItem.appendChild(imgItem);
-    historyItem.appendChild(year);
-    historyItem.appendChild(eventDescription);
+    historyItem.appendChild(eventDetails);
     document.getElementById('history-items').appendChild(historyItem);
   });
 }
