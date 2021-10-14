@@ -6,13 +6,16 @@
   margin: 0 0;
 }
 
+.top-bar {
+  display: none;
+}
+
 .hamburger {
   display: flex;
   flex-direction: column;
   justify-content: space-around;
   padding: 7px 10px;
   position: fixed;
-  background-color: #fff;
   top: 0;
   height: 50px;
 }
@@ -59,6 +62,27 @@
 }
 
 @media (min-width: 768px) {
+  .top-bar {
+    display: flex;
+    background-color: #272a31;
+    color: #fff;
+    position: fixed;
+    padding: 0 12%;
+    top: 0;
+    margin: 0;
+    width: 100%;
+    list-style-type: none;
+    height: 30px;
+    justify-content: flex-end;
+    align-items: center;
+    margin-right: 60px;
+    font-size: 13px;
+  }
+
+  .top-bar li {
+    padding: 0 20px;
+  }
+
   .hamburger {
     display: none;
   }
@@ -71,7 +95,8 @@
     display: flex;
     justify-content: flex-end;
     top: 0;
-    margin: 0;
+    margin-top: 30px;
+    padding: 0 10%;
     position: fixed;
     height: 7%;
     align-items: center;
@@ -111,31 +136,28 @@
   }
 
   .home-container .hero {
-    padding: 10% 26%;
+    padding: 10% 10%;
     margin: auto;
   }
 
   .home-container .hero #greeting {
-    color: #ec5242;
     font-size: 30px;
   }
 
   .home-container .hero #headline {
-    color: #ec5242;
-    width: 87%;
+    width: 60%;
     font-size: 70px;
     font-weight: bold;
   }
 
   .home-container .hero #sub-title {
-    width: 65%;
+    width: 40%;
     padding: 20px;
   }
 
   .home-container .hero .dates {
     padding: 20px 0;
     font-size: 30px;
-    font-weight: 700;
   }
 
   .home-container .hero .location {
@@ -189,10 +211,20 @@
   }
 }
 
+.hero-container {
+  background: url("../../assets/events.jpeg") no-repeat;
+  background-size: cover;
+}
+
 .hero {
   padding: 50px 10px;
   font-size: 20px;
-  background-color: #d3d3d3;
+  background-color: rgba(211, 211, 211, 0.9);
+}
+
+.hero #greeting,
+.hero #headline {
+  color: rgba(236, 82, 66, 0.8);
 }
 
 .hero h1 {
@@ -239,7 +271,15 @@ footer div p {
   font-size: 14px;
 }
 
+footer .desktop-footer {
+  display: none;
+}
+
 @media (min-width: 768px) {
+  footer {
+    background-color: #272a31;
+  }
+
   footer div {
     display: flex;
     flex-direction: row;
@@ -250,8 +290,18 @@ footer div p {
   }
 
   footer div img {
-    width: 200px;
+    fill: #e3dedd !important;
+    padding: 20px;
     height: 30%;
+  }
+
+  footer .desktop-footer {
+    display: flex;
+    color: #fff;
+  }
+
+  .mobile-footer {
+    display: none;
   }
 }
 
@@ -327,19 +377,43 @@ footer div p {
 #speakers-section #speakers div {
   align-items: center;
   display: flex;
-  padding: 0 10px;
   font-size: 12px;
   margin: 10px;
+}
+
+#speakers-section #speakers div .img-container {
+  display: grid;
+}
+
+#speakers-section #speakers div .img-container .img-decorator {
+  width: 60px;
+  height: 60px;
+  margin: -10px;
+}
+
+#speakers-section #speakers div .img-container .img-item {
+  margin-top: -60px;
 }
 
 #speakers-section #speakers div .performerInfo {
   flex-direction: column;
   align-items: flex-start;
+  line-height: 2;
 }
 
 #speakers-section #speakers div .performerInfo .performer-name {
   font-weight: 700;
   font-size: 17px;
+}
+
+#speakers-section #speakers div .performerInfo .performer-title {
+  color: #ec5242;
+  font-weight: bolder;
+  font-style: italic;
+}
+
+#speakers-section #speakers div .performerInfo .performer-desc {
+  line-height: 1.2;
 }
 
 #speakers-section #speakers img {
@@ -354,6 +428,15 @@ footer div p {
     flex-wrap: wrap;
     width: 70%;
     margin: auto;
+  }
+
+  #speakers-section #speakers .img-container .img-decorator {
+    width: 70px !important;
+    height: 70px !important;
+  }
+
+  #speakers-section #speakers .img-container .img-item {
+    margin-top: -90px !important;
   }
 
   #speakers-section #speakers div {
@@ -375,21 +458,27 @@ footer div p {
 
 #partners-section {
   text-align: center;
-  background-color: #272a31;
-  padding: 20px;
+  background-color: #d3d3d3;
+  padding: 20px 0;
+  border-bottom: 1px solid #d3d3d3;
 }
 
 #partners-section .partner-title {
-  color: #fff;
+  color: #000;
 }
 
 #partners-section #partners img {
+  padding: 10px 0;
   width: 30%;
 }
 
 @media (min-width: 768px) {
   #partners-section {
     padding: 40px;
+  }
+
+  .partner-title {
+    color: #000;
   }
 
   #partners img {
@@ -410,6 +499,12 @@ footer div p {
 .about-container .hero #headline {
   color: #ec5242;
 }
+
+/* .about-container .hero #details,
+.about-container .hero p,
+.about-container .hero a {
+  font-size: 14px;
+} */
 
 .about-container .hero #details {
   padding: 20px;

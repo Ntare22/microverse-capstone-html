@@ -12,28 +12,36 @@
 
 <body onload="loadAbout()">
   <header>
-    <div>
-      <nav class="nav-bar">
-        <div class="hamburger" onclick="toggle(this)">
-          <div id="hamburger-one"></div>
-          <div id="hamburger-two"></div>
-          <div id="hamburger-three"></div>
-        </div>
-        <ul id="nav-items" class="hide-menu">
-          <li class="nav-item" id="logo">
-            <img src="./assets/google-logo-black.png" alt="logo">
-          </li>
-          <li class="nav-item">
-            <a href="./about.html">About</a>
-          </li>
-          <li class="nav-item">Tickets</li>
-          <li class="nav-item">Jobs</li>
-          <li class="nav-item">
-            <button class="campaign-btn">CC Campaign</button>
-          </li>
-        </ul>
-      </nav>
-      <button class="campaign-btn">cc campaign</button>
+    <nav class="hamburger" onclick="toggle(this)">
+      <div class="hamburger-stick" id="hamburger-one"></div>
+      <div class="hamburger-stick" id="hamburger-two"></div>
+      <div class="hamburger-stick" id="hamburger-three"></div>
+    </nav>
+    <div class="nav-bar">
+      <ul class="top-bar">
+        <li>
+          <img src="./assets/facebook.svg" alt="facebook"/>
+        </li>
+        <li>
+          <img src="./assets/twitter.svg" alt="twitter"/>
+        </li>
+        <li>English</li>
+        <li>My Page</li>
+        <li>Logout</li>
+      </ul>
+      <ul id="nav-items" class="hide-menu">
+        <li id="logo">
+          <img src="./assets/google-logo-black.png" alt="logo">
+        </li>
+        <li class="nav-item">
+          <a href="./about.html">About</a>
+        </li>
+        <li class="nav-item">Tickets</li>
+        <li class="nav-item">Jobs</li>
+        <li class="nav-item">
+          <button class="campaign-btn">CC Campaign</button>
+        </li>
+      </ul>
     </div>
   </header>
   <div class="about-container">
@@ -60,8 +68,12 @@
       <div id="partners"></div>
     </section>
     <footer>
-      <div>
-        <img src="./assets/google-logo-black.png" alt="logo">
+      <div class="mobile-footer">
+        <img src="./assets/google-logo-black.svg" alt="logo">
+        <p>2015 Creative Commons. Some Rights</p>
+      </div>
+      <div class="desktop-footer">
+        <img src="./assets/google-logo-white.svg" alt="logo">
         <p>2015 Creative Commons. Some Rights</p>
       </div>
     </footer>

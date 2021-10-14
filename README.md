@@ -10,8 +10,8 @@
 - Javascript
 
 ## Live Demo
-
-[Link to Website](#)
+[Video Demo](https://www.loom.com/share/fbed3625ba944425863db26c9b40c16c)
+[Link to Website](https://ntare22.github.io/microverse-capstone-html/)
 
 
 ## Getting Started
@@ -33,7 +33,7 @@ To get a local copy up and running follow these simple example steps.
 
 ## Authors
 
-👤 **Author1**
+👤 **Jim Ntare**
 
 - GitHub: [@Ntare22](https://github.com/ntare22)
 - Twitter: [@jimNtare](https://twitter.com/jimNtare)
@@ -47,6 +47,7 @@ Feel free to check the [issues page](../../issues/).
 ## Show your support
 
 Give a ⭐️ if you like this project!
+The page design is inspired by (Cindy Shin)[https://www.behance.net/adagio07]
 
 ## Acknowledgments
 

@@ -1,8 +1,8 @@
-function toggle(btn) {
+const toggle = (btn) => {
   btn.classList.toggle('toggle');
 }
 
-function loadIndex() {
+const loadIndex = () => {
   const programs = [
     {
       icon: './assets/chat.svg',
@@ -59,51 +59,69 @@ function loadIndex() {
 
   const performers = [
     {
+      decorator: './assets/checkered-img.jpeg',
       image: './assets/img-cap.jpeg',
       name: 'Yochai Benkler',
-      title: 'Lecture',
+      title: 'Lecturer @ Havard',
       description: 'Lorem, ipsum dolor sit amet consectetur adipisicing elit. Dolorem magni ratione velit quod.',
     },
     {
+      decorator: './assets/checkered-img.jpeg',
       image: './assets/img-cap.jpeg',
       name: 'Yochai Benkler',
-      title: 'Lecture',
+      title: 'Lecturer @ Havard',
       description: 'Lorem, ipsum dolor sit amet consectetur adipisicing elit. Dolorem magni ratione velit quod.',
     },
     {
+      decorator: './assets/checkered-img.jpeg',
       image: './assets/img-cap.jpeg',
       name: 'Yochai Benkler',
-      title: 'Lecture',
+      title: 'Lecturer @ Havard',
       description: 'Lorem, ipsum dolor sit amet consectetur adipisicing elit. Dolorem magni ratione velit quod.',
     },
     {
+      decorator: './assets/checkered-img.jpeg',
       image: './assets/img-cap.jpeg',
       name: 'Yochai Benkler',
-      title: 'Lecture',
+      title: 'Lecturer @ Havard',
       description: 'Lorem, ipsum dolor sit amet consectetur adipisicing elit. Dolorem magni ratione velit quod.',
     },
     {
+      decorator: './assets/checkered-img.jpeg',
       image: './assets/img-cap.jpeg',
       name: 'Yochai Benkler',
-      title: 'Lecture',
+      title: 'Lecturer @ Havard',
       description: 'Lorem, ipsum dolor sit amet consectetur adipisicing elit. Dolorem magni ratione velit quod.',
     },
     {
+      decorator: './assets/checkered-img.jpeg',
       image: './assets/img-cap.jpeg',
       name: 'Yochai Benkler',
-      title: 'Lecture',
+      title: 'Lecturer @ Havard',
       description: 'Lorem, ipsum dolor sit amet consectetur adipisicing elit. Dolorem magni ratione velit quod.',
     },
   ];
 
   performers.forEach((performer) => {
     const performerItem = document.createElement('div');
-    const performerDetails = document.createElement('div')
-    performerDetails.classList = 'performerInfo'
+    const performerDetails = document.createElement('div');
+    performerDetails.classList = 'performerInfo';
+
+    const imgContainer = document.createElement('div');
+    imgContainer.classList = 'img-container'
 
     const imgItem = document.createElement('img');
+    imgItem.classList = 'img-item';
     imgItem.setAttribute('src', performer.image);
     imgItem.setAttribute('alt', 'performer image');
+
+    const imgItemContainer = document.createElement('div');
+    const imgDecoratorContainer = document.createElement('div');
+
+    const imgDecoration = document.createElement('img');
+    imgDecoration.classList = 'img-decorator'
+    imgDecoration.setAttribute('src', performer.decorator);
+    imgDecoration.setAttribute('alt', 'image decorator')
 
     const itemName = document.createElement('p');
     itemName.innerHTML = performer.name;
@@ -117,10 +135,15 @@ function loadIndex() {
     performerDesc.innerHTML = performer.description;
     performerDesc.classList = 'performer-desc';
 
-    performerItem.appendChild(imgItem);
+    imgDecoratorContainer.appendChild(imgDecoration)
+    imgItemContainer.appendChild(imgItem)
+
+    imgContainer.appendChild(imgDecoratorContainer)
+    imgContainer.appendChild(imgItemContainer);
     performerDetails.appendChild(itemName);
     performerDetails.appendChild(performerTitle);
     performerDetails.appendChild(performerDesc);
+    performerItem.appendChild(imgContainer);
     performerItem.appendChild(performerDetails);
     document.getElementById('speakers').appendChild(performerItem);
   });
@@ -152,7 +175,7 @@ partners.forEach((partner) => {
   document.getElementById('partners').appendChild(imgItem);
 });
 
-function loadAbout() {
+const loadAbout = () => {
   const pastEvents = [
     {
       img: './assets/events.jpeg',

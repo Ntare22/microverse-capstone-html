@@ -17,10 +17,16 @@ footer {
       font-size: 14px;
     }
   }
+
+  .desktop-footer {
+    display: none;
+  }
 }
 
 @media (min-width: 768px) {
   footer {
+    background-color: $dark-grey;
+
     div {
       display: flex;
       flex-direction: row;
@@ -30,9 +36,20 @@ footer {
       align-items: center;
 
       img {
-        width: 200px;
+        fill: #e3dedd !important;
+        // width: 200px;
+        padding: 20px;
         height: 30%;
       }
     }
+
+    .desktop-footer {
+      display: flex;
+      color: #fff;
+    }
+  }
+
+  .mobile-footer {
+    display: none;
   }
 }

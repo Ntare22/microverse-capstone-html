@@ -4,30 +4,27 @@
     top: 0;
 
     .hero {
-      padding: 10% 26%;
+      padding: 10% 10%;
       margin: auto;
 
       #greeting {
-        color: $orange;
         font-size: 30px;
       }
 
       #headline {
-        color: $orange;
-        width: 87%;
+        width: 60%;
         font-size: 70px;
         font-weight: bold;
       }
 
       #sub-title {
-        width: 65%;
+        width: 40%;
         padding: 20px;
       }
 
       .dates {
         padding: 20px 0;
         font-size: 30px;
-        font-weight: 700;
       }
 
       .location {
