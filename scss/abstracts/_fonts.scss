@@ -1,0 +1,26 @@
+$cocogoose-font-path: '../fonts/cocogoose';
+
+@font-face {
+  src: url("#{$cocogoose-font-path}/cocogoose-light.ttf") format('ttf');
+  font-family: 'cocogoose-light';
+}
+
+@font-face {
+  src: url("#{$cocogoose-font-path}/cocogoose-semilight.ttf") format('ttf');
+  font-family: 'cocogoose-semilight';
+}
+
+@font-face {
+  src: url("#{$cocogoose-font-path}/cocogoose-thin.ttf") format('ttf');
+  font-family: 'cocogoose-thin';
+}
+
+@font-face {
+  src: url("#{$cocogoose-font-path}/cocogoose-ultralight.ttf") format('ttf');
+  font-family: 'cocogoose-ultralight';
+}
+
+@font-face {
+  src: url("#{$cocogoose-font-path}/cocogoose-bold.ttf") format('ttf');
+  font-family: 'cocogoose-bold';
+}

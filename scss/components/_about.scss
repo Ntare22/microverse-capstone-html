@@ -1,0 +1,138 @@
+.about-container {
+  box-sizing: border-box;
+
+  .hero {
+    background-color: $light-grey;
+    text-align: center;
+
+    #headline {
+      color: $orange;
+    }
+
+    #details,
+    p,
+    a {
+      font-size: 14px;
+    }
+
+    #details {
+      padding: 20px;
+      border: 2px solid #a3a3a3;
+    }
+
+    a {
+      color: #000;
+      font-weight: bold;
+    }
+  }
+
+  #event-logo-section {
+    padding: 40px 0;
+    text-align: center;
+    border-bottom: 1px solid $light-grey;
+
+    h2 {
+      padding: 20px 0;
+    }
+
+    p {
+      font-size: 14px;
+      padding: 10px 20px;
+    }
+
+    img {
+      border: 1px solid $light-grey;
+      padding: 20px 40px;
+      width: 340px;
+    }
+  }
+
+  #history-section {
+    padding: 15px 20px;
+    text-align: center;
+
+    #history-items {
+      .history-item {
+        position: relative;
+
+        img {
+          width: 100%;
+        }
+
+        .event-details {
+          position: absolute;
+          width: 100%;
+          height: 94%;
+          margin: auto;
+          color: #fff;
+          bottom: 10px;
+          background: rgba(236, 82, 66, 0.5);
+
+          .event-text {
+            width: 60%;
+            margin-top: 23%;
+            margin-left: 20%;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (min-width: 768px) {
+  .about-container {
+    .hero {
+      padding: 10% 20%;
+
+      #headline {
+        font-size: 50px;
+        width: 55%;
+        margin: auto;
+        padding: 20px 0;
+      }
+
+      #details,
+      p,
+      a {
+        font-size: 18px;
+      }
+
+      p {
+        padding-top: 30px;
+      }
+
+      #details {
+        padding: 40px;
+        width: 70%;
+        margin: auto;
+      }
+    }
+
+    #event-logo-section {
+      img {
+        padding: 50px !important;
+        width: 550px !important;
+      }
+    }
+
+    #history-items {
+      display: flex;
+      width: 70%;
+      padding: 40px 0;
+      margin: auto;
+      justify-content: space-around;
+
+      img {
+        width: 90% !important;
+      }
+
+      .history-item {
+        .event-details {
+          height: 95.8% !important;
+          width: 90% !important;
+          margin-left: 5% !important;
+        }
+      }
+    }
+  }
+}

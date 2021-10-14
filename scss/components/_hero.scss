@@ -1,0 +1,38 @@
+.hero-container {
+  background: url('../../assets/events.jpeg') no-repeat;
+  background-size: cover;
+}
+
+.hero {
+  padding: 50px 10px;
+  font-size: 20px;
+  background-color: rgba($color: $light-grey, $alpha: 0.9);
+
+  #greeting,
+  #headline {
+    color: rgba($color: $orange, $alpha: 0.8);
+  }
+
+  h1 {
+    text-transform: uppercase;
+    font-family: 'cocobase-bold', 'Lato', sans-serif;
+    font-size: 32px;
+    width: 98%;
+    font-weight: bolder;
+  }
+
+  #sub-title {
+    padding: 14px;
+    font-size: 14px;
+    border: 1px solid #fff;
+    font-weight: 500;
+  }
+
+  .dates {
+    font-weight: bold;
+  }
+
+  .location {
+    font-size: 14px;
+  }
+}

@@ -1,0 +1,126 @@
+@import '../abstracts/colors';
+
+.top-bar {
+  display: none;
+}
+
+.hamburger {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  padding: 7px 10px;
+  position: fixed;
+  top: 0;
+  height: 50px;
+}
+
+#logo {
+  display: none;
+}
+
+#hamburger-one,
+#hamburger-two,
+#hamburger-three {
+  background-color: $dark-grey;
+  width: 35px;
+  height: 5px;
+}
+
+.toggle #hamburger-one {
+  -webkit-transform: rotate(-45deg) translate(-7px, 7px);
+  transform: rotate(-45deg) translate(-8px, 8px);
+}
+
+.toggle #hamburger-two {
+  opacity: 0;
+}
+
+.toggle #hamburger-three {
+  -webkit-transform: rotate(45deg) translate(-5px, -5px);
+  transform: rotate(45deg) translate(-8px, -8px);
+}
+
+#nav-items {
+  list-style-type: none;
+  box-sizing: border-box;
+  font-family: 'cocogoose-thin', 'Lato', sans-serif;
+  width: 100%;
+  position: absolute;
+  text-decoration: none;
+}
+
+.hide-menu {
+  display: none;
+}
+
+.campaign-btn {
+  display: none;
+}
+
+@media (min-width: 768px) {
+  .top-bar {
+    display: flex;
+    background-color: $dark-grey;
+    color: #fff;
+    position: fixed;
+    padding: 0 12%;
+    top: 0;
+    margin: 0;
+    width: 100%;
+    list-style-type: none;
+    height: 30px;
+    justify-content: flex-end;
+    align-items: center;
+    margin-right: 60px;
+    font-size: 13px;
+
+    li {
+      padding: 0 20px;
+    }
+  }
+
+  .hamburger {
+    display: none;
+  }
+
+  #logo {
+    display: block;
+  }
+
+  #nav-items {
+    display: flex;
+    justify-content: flex-end;
+    top: 0;
+    margin-top: 30px;
+    padding: 0 10%;
+    position: fixed;
+    height: 7%;
+    align-items: center;
+    background-color: #fff;
+
+    li {
+      padding: 0 30px;
+
+      a {
+        text-decoration: none;
+        color: #000;
+      }
+
+      img {
+        max-width: 10%;
+        min-width: 100px;
+        float: left;
+        margin: 0;
+      }
+    }
+  }
+
+  .campaign-btn {
+    display: block;
+    padding: 10px 30px;
+    background-color: #fff;
+    border: 5px solid $orange;
+    color: $orange;
+    white-space: nowrap;
+  }
+}

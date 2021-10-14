@@ -1,0 +1,34 @@
+#partners-section {
+  text-align: center;
+  background-color: $light-grey;
+  padding: 20px 0;
+  border-bottom: 1px solid $light-grey;
+
+  .partner-title {
+    color: #000;
+  }
+
+  #partners {
+    img {
+      padding: 10px 0;
+      width: 30%;
+    }
+  }
+}
+
+@media (min-width: 768px) {
+  #partners-section {
+    padding: 40px;
+  }
+
+  .partner-title {
+    color: #000;
+  }
+
+  #partners {
+    img {
+      width: 12% !important;
+      padding: 10px 15px;
+    }
+  }
+}
